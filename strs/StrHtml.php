@@ -7,6 +7,7 @@ $str_index ="<html ng-app='".$_POST['projectName'].'App'."'> \n".
 "       <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7' crossorigin='anonymous'>\n\n".
 "       <link rel='stylesheet' type='text/css' href='css/style.css'>\n\n".
 "       <link rel='stylesheet' href='https://npmcdn.com/angular-toastr/dist/angular-toastr.css' />\n".
+"       <link rel='stylesheet' href='https://cdn.jsdelivr.net/sweetalert2/6.3.1/sweetalert2.min.css' />\n".
 "   </head>\n".
 "   <body style='background-color:#e7e7e7'>\n".
 "       <div class='".$_POST['projectName']."-nav'>".ucfirst($_POST['projectName'])."</div>\n\n".
@@ -20,6 +21,7 @@ $str_index ="<html ng-app='".$_POST['projectName'].'App'."'> \n".
 "       <script src='js/controller/dashboard.controller.js'></script>\n".
 "       <script src='js/controller/ngcrud.controller.js'></script>\n".
 "       <script src='js/service/user.service.js'></script>\n".
+"       <script src='https://cdn.jsdelivr.net/sweetalert2/6.3.1/sweetalert2.min.js'></script>\n".
 "   </body>\n".
 "</html>";
 

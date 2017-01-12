@@ -14,7 +14,7 @@ body{
     background-color: white;
     box-shadow: 0px 0px 7px 0px;
     z-index: 888;
-    margin-top: 7%;
+    padding-top: 7%;
 }
 .".$_POST['projectName']."-nav{
     width: 100%;

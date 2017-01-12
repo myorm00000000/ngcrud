@@ -41,7 +41,22 @@ if(!isset($_POST['dbPassword'])){
     echo 'Type the password (database)';
     exit;
 }
+$host="localhost"; 
 
+$root=$_POST['dbUserName']; 
+$root_password=$_POST['dbPassword'];
+
+$db=$_POST['dbName']; 
+
+try {
+    $dbh = new PDO("mysql:host=$host", $root, $root_password);
+
+    $dbh->exec("CREATE DATABASE `$db`") 
+    or die(print_r($dbh->errorInfo(), true));
+
+} catch (PDOException $e) {
+    die("DB ERROR: ". $e->getMessage());
+}
 
 $return	= mkdir($_POST['directoryUrl'],0777);
 $bool1 	= shell_exec("chmod 777 ".$_POST['directoryUrl']);

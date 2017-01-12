@@ -15,7 +15,7 @@ function createProject(){
         method: 'post',
         data: data,
         success: function(response){
-            window.open('http://localhost/ngcrud/done.php','_blank');
+            window.open('done.php');
             $("#loadspin").hide();
         }
     })

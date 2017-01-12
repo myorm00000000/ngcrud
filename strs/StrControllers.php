@@ -85,14 +85,27 @@ $str_dashboard_controller = "angular.module('dashboard.controller',['user.servic
             \$scope.itemlist = data;
         })
     }
-    \$scope.delete = function(id){
-        userService.delete(id).success(function(data){
-            if(data == 'true'){
-                \$scope.list();
-            } else {
-                toastr.erro(data, 'Error');
-            }
+    \$scope.delete = function(person){
+        swal({
+            title:'Delete!',
+            text: 'Deseja realmente de letar '+person.name+'?',
+            showCancelButton:true,
+            cancelButtonText:'Cancelar',
+            confirmButtonText:'Sim, desejo!'
+        }).then(function(){
+            userService.delete(id).success(function(data){
+                if(data == 'true'){
+                    \$scope.list();
+                    swal('Sucesso', 'Registro deletado com sucesso', 'success')
+                } else {
+                    swal('Erro!', data, 'error')
+                }
+            })    
+        },
+        function(){
+            swal('Canceldo', 'Dados preservados', 'error')
         })
+        
     }
 }])\n\n
 ";
