@@ -27,12 +27,9 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="index.js"></script>
+
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/sweetalert2/6.3.1/sweetalert2.min.css' />
     </head>
 
     <body>
@@ -82,8 +79,15 @@
         </div>
         <div class="col-md-4"></div>
         </div>
-        <div class="col-md-12" style="z-index: 2; background-color: white; opacity: .6; position: fixed; width: 100%; height: 100vh; top: 0; left: 0; padding-top: 20em; padding-left: 50em; display: none" id="loadspin">
-            <i class="fa fa-spinner fa-spin fa-5x" style="z-index: 3 "></i>
-        </div>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+        <!-- bootstrap js -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <script src="index.js"></script>
+
+        <script src='https://cdn.jsdelivr.net/sweetalert2/6.3.1/sweetalert2.min.js'></script>
     </body>
 </html>

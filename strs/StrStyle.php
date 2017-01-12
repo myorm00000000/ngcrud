@@ -8,8 +8,7 @@ body{
     width: 97%;
     margin-left: 23px;
     float: left;
-    min-height: 600px;
-    height: auto;
+    height: 100vh;
     padding:15px;
     background-color: white;
     box-shadow: 0px 0px 7px 0px;

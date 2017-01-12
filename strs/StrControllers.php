@@ -85,15 +85,16 @@ $str_dashboard_controller = "angular.module('dashboard.controller',['user.servic
             \$scope.itemlist = data;
         })
     }
-    \$scope.delete = function(person){
+    \$scope.delete = function(user){
         swal({
             title:'Delete!',
-            text: 'Deseja realmente de letar '+person.name+'?',
+            text: 'Deseja realmente de letar '+user.name+'?',
             showCancelButton:true,
             cancelButtonText:'Cancelar',
-            confirmButtonText:'Sim, desejo!'
+            confirmButtonText:'Sim, desejo!',
+            type:'info'
         }).then(function(){
-            userService.delete(id).success(function(data){
+            userService.delete(user.id).success(function(data){
                 if(data == 'true'){
                     \$scope.list();
                     swal('Sucesso', 'Registro deletado com sucesso', 'success')

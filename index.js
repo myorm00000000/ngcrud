@@ -1,4 +1,3 @@
-$("#loadspin").hide();
 function createProject(){
     var data = {
         action: 'create',
@@ -9,14 +8,19 @@ function createProject(){
         dbPassword: $('#dbPassword').val(),
         dbPrefixTable: $('#dbPrefixTable').val()
     }
-    $("#loadspin").show();
+    swal({
+        title:" ",
+        text:" ",
+        html:"<i class='fa fa-spinner fa-spin fa-fw fa-5x'></i>",
+        showConfirmButton:false,
+    })
     $.ajax({
         url:'create.php',
         method: 'post',
         data: data,
         success: function(response){
-            window.open('done.php');
-            $("#loadspin").hide();
+            location.href="done.php";
+            swal.close();
         }
     })
 }

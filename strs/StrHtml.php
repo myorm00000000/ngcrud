@@ -106,7 +106,7 @@ $tpl_dashboard = "
                         </td>
                         <td class='col-md-1 col-lg-1'>
                             <i class='glyphicon glyphicon-pencil' ng-click='editGrid(user)'></i>
-                            <i class='glyphicon glyphicon-trash'  ng-click='delete(user.id)'></i>
+                            <i class='glyphicon glyphicon-trash'  ng-click='delete(user)'></i>
                         </td>
                     </tr>
                 </tbody>
