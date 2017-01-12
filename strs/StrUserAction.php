@@ -15,7 +15,7 @@ switch(\$_POST['action']){
 		\$user->setActive(true);
 
 		try{
-				\$userDAO->toinsert(\$user); //the 'toinsert' method is a default in the AbstractDAO class;
+				\$userDAO->create(\$user); //the 'create' method is a default in the AbstractDAO class;
 				echo 'true';
 			}catch(Exception \$ex){
 				echo \$ex->getMessage();
@@ -30,7 +30,7 @@ switch(\$_POST['action']){
 		\$user->setActive(true);
 
 		try{
-				\$userDAO->toedit(\$user); //the 'toedit' method is a default in the AbstractDAO class;
+				\$userDAO->update(\$user); //the 'update' method is a default in the AbstractDAO class;
 				echo 'true';
 			}catch(Exception \$ex){
 				echo \$ex->getMessage();
@@ -39,7 +39,7 @@ switch(\$_POST['action']){
 
 	case 'delete':
 		try{
-				\$userDAO->todelete(\$_POST['id']); //the 'todelete' method is a default in the AbstractDAO class;
+				\$userDAO->delete(\$_POST['id']); //the 'delete' method is a default in the AbstractDAO class;
 				echo 'true';
 			}catch(Exception \$ex){
 				echo \$ex->getMessage();
@@ -48,7 +48,7 @@ switch(\$_POST['action']){
 
 	case 'get':
 		try{
-				\$user = \$userDAO->todelete(\$_POST['id'])->toArray(); //'toget' AND 'toArray' is a default in the AbstractDAO;
+				\$user = \$userDAO->find(\$_POST['id'])->toArray(); //'find' AND 'toArray' is a default in the AbstractDAO;
 				echo json_encode(\$user);
 			}catch(Exception \$ex){
 				echo \$ex->getMessage();
@@ -57,7 +57,7 @@ switch(\$_POST['action']){
 	case 'list':
 		try{
 				\$filters['active'] = true;
-				\$array = \$userDAO->tolist(\$filters);
+				\$array = \$userDAO->get(\$filters);
 
 				foreach(\$array as \$item){
 					\$list[] = \$item->toArray();

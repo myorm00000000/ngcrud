@@ -11,7 +11,7 @@ abstract class AbstractDAO extends Connection{
     private \$strSql;
 
 
-    public function tolist(\$filters=false, \$order=false, \$pagination){
+    public function get(\$filters=false, \$order=false, \$pagination){
 
        \$sql = \"SELECT * FROM `{\$this->getTableName()}` \";
         \$sql .= \$this->prepareSql(\$filters,\$order,\$pagination);
@@ -29,7 +29,7 @@ abstract class AbstractDAO extends Connection{
         }
     }
 
-    public function toinsert(\$entity){
+    public function create(\$entity){
 
         \$sql = 'INSERT INTO `'.\$this->getTableName().'` ';
 
@@ -55,7 +55,7 @@ abstract class AbstractDAO extends Connection{
         }
     }
 
-    function todelete(\$id){
+    function delete(\$id){
         \$sql = \"DELETE FROM `{\$this->getTableName()}` WHERE {\$this->getPK()} = '{\$id}'\";
         \$stmt = \$this->getCon()->prepare(\$sql);
         \$this->setStrSql(\$sql);
@@ -69,7 +69,7 @@ abstract class AbstractDAO extends Connection{
         }
     }
 
-    function toget(\$id){
+    function find(\$id){
         \$sql = \"SELECT * FROM `{\$this->getTableName()}` WHERE {\$this->getPK()} = '{\$id}'\";
         \$this->setStrSql(\$sql);
         \$stmt = \$this->getCon()->query(\$sql);
@@ -86,7 +86,7 @@ abstract class AbstractDAO extends Connection{
     }
 
 
-    function toedit(\$entity){
+    function update(\$entity){
         \$sql = \"UPDATE `{\$this->getTableName()}` SET \";
         \$data = \$this->populate(\$entity);
         \$i=1;
