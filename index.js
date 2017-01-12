@@ -1,3 +1,4 @@
+$("#loadspin").hide();
 function createProject(){
     var data = {
         action: 'create',
@@ -8,13 +9,14 @@ function createProject(){
         dbPassword: $('#dbPassword').val(),
         dbPrefixTable: $('#dbPrefixTable').val()
     }
-
+    $("#loadspin").show();
     $.ajax({
         url:'create.php',
         method: 'post',
         data: data,
         success: function(response){
-            window.open('http://localhost/ngCrud/done.php','_blank');
+            window.open('http://localhost/ngcrud/done.php','_blank');
+            $("#loadspin").hide();
         }
     })
 }

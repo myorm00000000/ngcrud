@@ -40,7 +40,7 @@
         <div class='col-md-2'></div>
 		<div class='col-md-8 jumbotron'>
 		    <h1 class='text-center'>Finisehd!</h1>
-		    <p>The most annyong part of all the projects (structures) was made for us.</p>
+		    <p>The most annyong part of entire projects (structures) was made for us.</p>
 		    <p>Now, it's your turn to have some fun!</p>
 		    <hr>
 		    <h4 class="text-center">Features:</h4>
@@ -55,4 +55,3 @@
 
     </body>
 </html>
-

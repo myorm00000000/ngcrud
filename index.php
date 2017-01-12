@@ -22,6 +22,8 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
@@ -42,7 +44,7 @@
                 <fieldset>
                     <legend style="padding-left: 10px"><a>Project Configuration</a></legend>
                     <form class="form-group" onsubmit="return false;">
-
+                        
                         <div class="col-md-12">
                             <label>Project name</label>
                             <input type="text" class="form-control" id="projectName">
@@ -79,6 +81,9 @@
             </div>
         </div>
         <div class="col-md-4"></div>
+        </div>
+        <div class="col-md-12" style="z-index: 2; background-color: white; opacity: .6; position: fixed; width: 100%; height: 100vh; top: 0; left: 0; padding-top: 20em; padding-left: 50em; display: none" id="loadspin">
+            <i class="fa fa-spinner fa-spin fa-5x" style="z-index: 3 "></i>
         </div>
     </body>
 </html>
